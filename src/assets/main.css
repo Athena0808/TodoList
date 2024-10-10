@@ -1,0 +1,97 @@
+body{
+  background-color:#F5F5F5;
+}
+.title-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  text-align: center;     
+}
+h1 {
+  font-size: 50px;        
+  margin: 0 10px;          
+}
+
+.todo-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #777;
+  text-align: center; /* 居中显示 */
+}
+
+/* 输入框和任务项的共同样式 */
+.todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 输入框样式，使其与任务项在视觉上统一 */
+.todo-input-item input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+/* 任务项文本样式 */
+.completed {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.todo-app {
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* 居中显示 */
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.todo-item {
+  position: relative; /* 使得删除按钮相对于待办项定位 */
+  padding: 10px; /* 添加内边距，使项更美观 */
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐 */
+  border-bottom: 1px solid #ddd; /* 添加底部边框 */
+}
+
+.delete-btn {
+  display: none; /* 默认隐藏 */
+  background: none; /* 移除默认背景 */
+  border: none; /* 移除边框 */
+  cursor: pointer; /* 鼠标悬停时显示手型 */
+  color: red; /* 按钮颜色 */
+  font-size: 18px; /* 字体大小 */
+  margin-right: 10px; /* 添加右边距，以便和勾选框分开 */
+}
+
+.todo-item:hover .delete-btn {
+  display: block; /* 悬停时显示删除按钮 */
+  margin-left: auto;
+}
+
+
